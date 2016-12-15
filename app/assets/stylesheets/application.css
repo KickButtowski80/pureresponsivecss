@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    background: #F4F4F4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: white;
+    width: 80%;
+    max-height: 100%;
+}
+
+#flex-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    padding: 45px 0 20px 0px;
+}
+
+.header #menu-item {
+    list-style-type: none;
+    background-color: #c5d6db;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.header #menu-item>li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.header h2 {
+    text-align: center;
+}
+
+.link-to {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.link-to:hover {
+    color: #ecf2f3;
+}
+
+#left {
+    width: 30%;
+    height: 400px;
+    overflow: auto;
+}
+
+#right {
+    width: 70%;
+    height: 400px;
+    overflow: auto;
+}
+
+#footer {
+    padding: 6px 40px 6px 40px;
+    background-color: #d8d8d8;
+    color: #444444;
+    font-size: 11px;
+}
+
+#footer a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    body {
+        /* background-color: red;*/
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*flex-direction: row ;
+        flex-wrap:nowrap;*/
+    }
+    #flex-content {
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    .header #menu-item>li {
+        display: block;
+        text-align: center;
+        font-size: 32px;
+    }
+    #container {
+        height: 750;
+        position: relative;
+        top: 50%;
+        margin-top: 20%;
+    }
+    #left {
+        width: 100%;
+        height: 400px;
+        overflow: auto;
+    }
+    #right {
+        width: 100%;
+        height: 400px;
+        overflow: auto;
+    }
+}
