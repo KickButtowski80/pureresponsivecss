@@ -11,12 +11,14 @@
       <div id="container">
          <%= render 'layouts/menu' %>  
          <div id="flex-content">
-            
             <div id="left">
                <%= render 'layouts/sidebar' %>
             </div>
             <div id="right">
-               <%= yield %>
+               
+               <div id="right-text">
+                  <%= yield %>
+               </div>
             </div>
             
          </div>
